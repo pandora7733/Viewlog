@@ -38,22 +38,16 @@
         </div>
         <hr style="margin: 0;">
         <nav class="profile_navbar">
-            <li><a href="#">Log</a></li>
-            <li><a href="#">image</a></li>
-            <li><a href="#">media</a></li>
+            <ul>
+                <li><a href="#">Image</a></li>
+                <li><a href="#">Log</a></li>
+                <li><a href="#">Media</a></li>
+            </ul>
         </nav>
         <hr style="margin: 0;">
         <div class="main-content">
-            <!-- masonry grid -->
-            <div class="grid">
-                <div class="grid-sizer"></div><!-- 기준 열 -->
+            <div class="blog">
                 
-                <div class="grid-item"><img src="/img/test/Unknown-2.jpg" alt=""></div>
-                <div class="grid-item"><img src="/img/test/Unknown-3.jpg" alt=""></div>
-                <div class="grid-item"><img src="/img/test/Unknown-4.jpg" alt=""></div>
-                <div class="grid-item"><img src="/img/test/Unknown-5.jpg" alt=""></div>
-                <div class="grid-item"><img src="/img/test/Unknown-8.jpg" alt=""></div>
-                <div class="grid-item"><img src="/img/test/Unknown-12.jpg" alt=""></div>
             </div>
         </div>
         <footer>
@@ -62,16 +56,6 @@
     </div>
 
     <script src="/js/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/jquery/dist/jquery.min.js"></script>
-    <script src="/js/masonry-layout/dist/masonry.pkgd.min.js"></script>
-    <script>
-    $(document).ready(function () {
-        $('.grid').masonry({
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true
-        });
-    });
-</script>
+    
 </body>
 </html>

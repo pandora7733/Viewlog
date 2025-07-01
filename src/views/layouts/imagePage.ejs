@@ -1,0 +1,53 @@
+/* masonry grid css */
+
+
+.grid {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.grid-sizer {
+  width: 33.333%; /* 3열 그리드 기준 (화면 크기 따라 변경 가능) */
+}
+
+.grid-item {
+  width: 33.333%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.grid-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+
+<!-- masonry grid -->
+<div class="grid">
+    <div class="grid-sizer"></div><!-- 기준 열 -->
+    
+    <div class="grid-item"><img src="/img/test/Unknown-2.jpg" alt=""></div>
+    <div class="grid-item"><img src="/img/test/Unknown-3.jpg" alt=""></div>
+    <div class="grid-item"><img src="/img/test/Unknown-4.jpg" alt=""></div>
+    <div class="grid-item"><img src="/img/test/Unknown-5.jpg" alt=""></div>
+    <div class="grid-item"><img src="/img/test/Unknown-8.jpg" alt=""></div>
+    <div class="grid-item"><img src="/img/test/Unknown-12.jpg" alt=""></div>
+</div>
+
+
+<script src="/js/jquery/dist/jquery.min.js"></script>
+    <script src="/js/masonry-layout/dist/masonry.pkgd.min.js"></script>
+    <script src="/js/imagesloaded/"></script>
+    <script>
+    $(document).ready(function () {
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+    });
+</script>
+
