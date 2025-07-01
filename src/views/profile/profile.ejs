@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- 일상 글, 이미지, 동영상 -->
+
+    <!-- 사이드 바 -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="instagram_logo.png" alt="Instagram Logo" class="logo">
+        </div>
+        <ul class="menu-list">
+            <li><a href="#"><i class="fas fa-home"></i> 홈</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> 검색</a></li>
+            <li><a href="#"><i class="far fa-compass"></i> 탐색</a></li>
+            <li><a href="#"><i class="far fa-paper-plane"></i> 메시지</a></li>
+            <li><a href="#"><i class="far fa-heart"></i> 알림</a></li>
+            <li><a href="#"><i class="far fa-plus-square"></i> 만들기</a></li>
+            <li><a href="#"><i class="far fa-user-circle"></i> 프로필</a></li>
+        </ul>
+        <div class="more-options">
+            <a href="#"><i class="fas fa-bars"></i> 더 보기</a>
+        </div>
+    </div>
+
+    <!-- 콘텐츠와 푸터를 담는 래퍼 -->
+    <div class="content-wrapper">
+        <div class="main-profile">
+            <img class="profile_img" src="/img/cat.jpg" alt="profile image">
+            <h1>환영합니다!</h1>
+            <p>사이드바와 함께 메인 콘텐츠를 배치할 수 있습니다.</p>
+        </div>
+        <hr style="margin: 0;">
+        <nav class="profile_navbar">
+            <li><a href="#">Log</a></li>
+            <li><a href="#">image</a></li>
+            <li><a href="#">media</a></li>
+        </nav>
+        <hr style="margin: 0;">
+        <div class="main-content">
+            <!-- masonry grid -->
+            <div class="grid">
+                <div class="grid-sizer"></div><!-- 기준 열 -->
+                
+                <div class="grid-item"><img src="/img/test/Unknown-2.jpg" alt=""></div>
+                <div class="grid-item"><img src="/img/test/Unknown-3.jpg" alt=""></div>
+                <div class="grid-item"><img src="/img/test/Unknown-4.jpg" alt=""></div>
+                <div class="grid-item"><img src="/img/test/Unknown-5.jpg" alt=""></div>
+                <div class="grid-item"><img src="/img/test/Unknown-8.jpg" alt=""></div>
+                <div class="grid-item"><img src="/img/test/Unknown-12.jpg" alt=""></div>
+            </div>
+        </div>
+        <footer>
+            여기는 footer 입니다.
+        </footer>
+    </div>
+
+    <script src="/js/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery/dist/jquery.min.js"></script>
+    <script src="/js/masonry-layout/dist/masonry.pkgd.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+    });
+</script>
+</body>
+</html>
