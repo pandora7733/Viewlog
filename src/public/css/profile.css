@@ -202,37 +202,41 @@ footer {
     margin: 0 auto;
 }
 
-
-/* media */
-.mymedia {
-    max-width: 70%;
-    margin: 0 auto;
-}
-
-.blog-section hr {
-    margin: 0;
-}
-
 .blog-section h2 {
     margin: 0.5rem 0;
     text-align: left;
 }
 
-.blog-section h2 a {
-    text-decoration: none;
-}
-
 .blog-section p {
-    margin-top: 0;
-    margin-bottom: 0.3rem;
+    margin: 0;
+    margin-bottom: 0.2rem;
     text-align: left;
 }
 
-.blog-section p a {
-    text-decoration: none;
+.post_action {
+    color: #7b7a7a;
+    font-size: 0.8rem;
 }
 
-.post_action {
-    color: rgb(166, 166, 166);
-    font-size: 0.85rem;
+
+/* media */
+.media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.media-item {
+  flex: 1 1 calc(33.333% - 10px); /* 3열 그리드 */
+  position: relative;
+  cursor: pointer;
+}
+
+.media-item video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #000;
 }
