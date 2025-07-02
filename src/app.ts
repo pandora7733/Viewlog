@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
-// import expressLayouts from "express-ejs-layouts";
+import expressLayouts from "express-ejs-layouts";
 import cookieParser from "cookie-parser";
 import methodOverride from "method-override";
 const connectdb = require("./config/db");
@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 connectdb();
 
-// app.use(expressLayouts);
+app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 

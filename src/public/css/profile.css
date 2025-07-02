@@ -173,7 +173,6 @@ footer {
 
 /* masonry grid css */
 
-
 .grid {
   max-width: 70%;
   margin: 0 auto;
@@ -198,3 +197,42 @@ footer {
 
 
 /* blog */
+.myblog {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+
+/* media */
+.mymedia {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.blog-section hr {
+    margin: 0;
+}
+
+.blog-section h2 {
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.blog-section h2 a {
+    text-decoration: none;
+}
+
+.blog-section p {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.blog-section p a {
+    text-decoration: none;
+}
+
+.post_action {
+    color: rgb(166, 166, 166);
+    font-size: 0.85rem;
+}
