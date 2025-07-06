@@ -1,6 +1,14 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
+    profileImage: {
+        type: String,
+        default: "/media/images/default.png",
+    },
+    description: {
+        type: String,
+        default: "",
+    },
     username: {
         type: String,
         required: true,

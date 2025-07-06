@@ -2,107 +2,42 @@ body {
     margin: 0;
 }
 
-.sidebar {
-    width: 240px; /* 인스타그램과 유사한 너비 */
-    background-color: #ffffff;
-    border-right: 1px solid #dbdbdb;
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* 전체 화면 높이 */
-    position: fixed; /* 스크롤해도 고정 */
-    left: 0;
-    top: 0;
-}
+/* profile */
 
-.sidebar-header {
-    padding: 0 20px 20px;
-    text-align: center; /* 로고 중앙 정렬 */
-}
-
-.sidebar-header .logo {
-    width: 110px; /* 로고 크기 조절 */
-    height: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1; /* 남은 공간을 채우도록 설정 */
-}
-
-.menu-list li {
-    margin-bottom: 5px;
-}
-
-.menu-list li a {
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: #262626;
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 8px; /* hover 시 배경을 위해 추가 */
-    transition: background-color 0.2s ease, font-weight 0.2s ease;
-}
-
-.menu-list li a:hover {
-    background-color: #f2f2f2;
-    font-weight: 600;
-}
-
-.menu-list li a i {
-    margin-right: 15px;
-    font-size: 22px; /* 아이콘 크기 */
-    width: 24px; /* 아이콘 너비 고정하여 텍스트 정렬 유지 */
-    text-align: center;
-}
-
-/* 활성 링크 스타일 (선택 사항) */
-/* .menu-list li a.active {
-    font-weight: 700;
-} */
-
-.more-options {
+.main-profile {
+    flex: 1;
     padding: 20px;
-    margin-top: auto; /* 메뉴 리스트 하단에 배치 */
-    border-top: 1px solid #efefef;
-    
-}
-
-.more-options a {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    text-decoration: none;
-    color: #262626;
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 8px;
-    transition: background-color 0.2s ease, font-weight 0.2s ease;
-}
-
-.more-options a:hover {
-    background-color: #f2f2f2;
-    font-weight: 600;
-}
-
-.more-options a i {
-    margin-right: 15px;
-    font-size: 22px;
-    width: 24px;
     text-align: center;
+}
+
+.main-profile p {
+  margin: 0;
 }
 
 .profile_img{
-    width: 10rem;
+    width: 8rem;
     border-radius: 30%;
 }
 
+.profile_content{
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
 
+.profile_content h1 {
+  margin: 0;
+}
+
+.profile_content h1 {
+  margin: 0;
+}
+
+.profile_content a img {
+  width: 2rem;
+}
 
 /* navbar */
 .profile_navbar ul {
@@ -152,16 +87,8 @@ body {
 
 /* 콘텐츠와 푸터를 세로로 정렬할 래퍼 */
 .content-wrapper {
-    margin-left: 240px; /* 사이드바 너비만큼 왼쪽 마진 */
     display: flex;
     flex-direction: column;
-}
-
-/* 메인 콘텐츠는 남은 공간 차지 */
-.main-profile {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
 }
 
 /* 푸터는 항상 아래 */
@@ -200,6 +127,14 @@ footer {
 .myblog {
     max-width: 70%;
     margin: 0 auto;
+}
+
+.blog-section h2 a {
+    text-decoration: none;
+}
+
+.blog-section p a {
+    text-decoration: none;
 }
 
 .blog-section h2 {

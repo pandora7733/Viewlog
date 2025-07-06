@@ -8,6 +8,9 @@ const User = require("../models/User");
 import jwt from "jsonwebtoken";
 const jwtSecret = process.env.JWT_SECRET;
 import bcrypt from "bcrypt";
+const layout1  = "../views/logs/signup"
+const layout2 = "../views/logs/login"
+const layout3 = "../views/logs/login_admin"
 
 /**
  * SignUp page
@@ -19,7 +22,7 @@ router.get(
         const locals = {
             title: "SignUp"
         }
-        res.render("logs/signup", {locals})
+        res.render("logs/signup", {locals, layout: layout1})
     })
 )
 
@@ -70,7 +73,7 @@ router.get(
         const locals = {
             title: "Login"
         }
-        res.render("logs/login", {locals})
+        res.render("logs/login", {locals, layout: layout2})
     })
 )
 
@@ -107,7 +110,7 @@ router.get(
         const locals = {
             title: "LoginAdmin"
         }
-        res.render("logs/login_admin", {locals})
+        res.render("logs/login_admin", {locals, layout: layout3})
     })
 )
 

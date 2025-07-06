@@ -25,7 +25,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(methodOverride("_method"));
 
-app.use("/", require("./routers/home"));
 app.use("/", require("./routers/logs"));
 app.use("/home/", require("./routers/profile"));
 
