@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= locals.title %></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= locals.title %></title>
+  <link rel="stylesheet" href="/css/profileAdd.css"/>
 </head>
 <body>
-    <div class="profileAdd">
+    <form class="profileAdd" method="POST" action="/home/profile/setting/add/<%= data._id %>?_method=PUT" enctype="multipart/form-data">
+        <!-- profileAdd.ejs 중 이미지 부분 -->
         <div class="profileImage">
-            <img src="<%= data.profileImage %>" alt="">
-            <button></button>
+            <label for="profileImageInput">
+                <img id="previewImage" src="<%= data.profileImage %>" alt="프로필 이미지">
+            </label>
+            <input type="file" id="profileImageInput" name="profileImage" accept="image/*" style="display: none;" onchange="previewFile(this)">
         </div>
+
         <div class="username">
-            <h1><%= data.username %></h1>
-            <button></button>
+            <label for="username">이름</label>
+            <input type="text" name="username" id="username" value="<%= data.username %>">
         </div>
+
         <div class="description">
-            <p><%= data.description %></p>
-            <button></button>
+            <label for="description">자기소개</label>
+            <textarea name="description" id="description"><%= data.description %></textarea>
         </div>
-    </div>
+
+        <button type="submit">변경</button>
+    </form>
+
+    <script src="/js/jquery/dist/jquery.min.js"></script>
+    <script>
+        function previewFile(input) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#previewImage').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
 </html>

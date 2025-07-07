@@ -3,40 +3,47 @@ body {
 }
 
 /* profile */
-
 .main-profile {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+  flex: 1;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-.main-profile p {
-  margin: 0;
+.profileImage {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.profile_img{
-    width: 8rem;
-    border-radius: 30%;
+.profile_img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
 }
 
-.profile_content{
+.profile_content {
   display: flex;
-  margin: 0;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .profile_content h1 {
   margin: 0;
-}
-
-.profile_content h1 {
-  margin: 0;
+  font-size: 1.5rem;
 }
 
 .profile_content a img {
   width: 2rem;
+  height: 2rem;
 }
 
 /* navbar */
@@ -67,6 +74,32 @@ body {
 
 .profile_navbar li a:hover {
   background-color: #f0f0f0;
+}
+
+/* 마지막 li는 아이콘만 있는 업로드 버튼이라 별도 스타일을 줘야 자연스러움 */
+.profile_navbar li.upload-button {
+  flex: 0; /* 버튼 크기에 딱 맞게 */
+  margin-left: auto; /* 오른쪽 끝으로 정렬 (선택사항) */
+}
+
+/* svg 아이콘 전용 스타일 */
+.profile_navbar li.upload-button a {
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* svg 아이콘 이미지 크기 조절 */
+.profile_navbar li.upload-button a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0); /* 검은색처럼 보이게 */
+  transition: opacity 0.2s ease;
+}
+
+.profile_navbar li.upload-button a:hover img {
+  opacity: 0.6;
 }
 
 /* main content */

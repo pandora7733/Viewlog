@@ -11,12 +11,16 @@
     <!-- 콘텐츠와 푸터를 담는 래퍼 -->
     <div class="content-wrapper">
         <div class="main-profile">
-            <img class="profile_img" src="/media/images/default.png" alt="profile image">
-            <div class="profile_content">
-                <h1>sihoo park</h1>
-                <a href="/home/profile/setting/add/"><img src="/images/setting.svg" alt="setting"></a>
+            <div class="profileImage">
+                <img class="profile_img" src="<%= data.profileImage %>" alt="profile image" />
             </div>
-            <p>반갑습니다. 여기는 저의 소개를 작성하는 곳 입니다.</p>
+            <div class="profile_content">
+                <h1><%= data.username %></h1>
+                <a href="/home/profile/setting/add/<%= data._id %>">
+                    <img src="/images/setting.svg" alt="setting" />
+                </a>
+            </div>
+            <p><%= data.description %></p>
         </div>
         <hr style="margin: 0;">
         <nav class="profile_navbar">
@@ -24,6 +28,9 @@
                 <li><a href="/home/profile">Image</a></li>
                 <li><a href="/home/profile/log">Log</a></li>
                 <li><a href="/home/profile/media">Media</a></li>
+                <li class="upload-button">
+                    <a href="<%= locals.herf %>"><img src="/images/add.svg" alt="add"></a>
+                </li>
             </ul>
         </nav>
         <hr style="margin: 0;">

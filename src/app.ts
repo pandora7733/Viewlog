@@ -27,6 +27,7 @@ app.use(methodOverride("_method"));
 
 app.use("/", require("./routers/logs"));
 app.use("/home/", require("./routers/profile"));
+app.use("/", require("./routers/contentsAdd"));
 
 // 서버 실행
 app.listen(PORT, () => {

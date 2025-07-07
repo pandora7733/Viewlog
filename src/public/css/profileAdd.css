@@ -1,0 +1,124 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.profileAdd {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+.username, .description {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.username label,
+.description label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.username input,
+.description textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.description textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3897f0;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2d7cd4;
+}
+
+
+.profileImage {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.profileImage img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    transition: opacity 0.3s ease;
+}
+
+#profileImgInput {
+    display: none;
+}
+
+.profileImage {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 1.5rem;
+    cursor: pointer;
+}
+
+.profileImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    transition: opacity 0.3s ease;
+}
+
+.profileImage:hover img {
+    opacity: 0.7;
+}
+
+.profileImage::after {
+    content: "변경";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 10px;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.profileImage:hover::after {
+    opacity: 1;
+}
